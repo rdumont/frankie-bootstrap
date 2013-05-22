@@ -1,0 +1,5 @@
+Url: http://rodrigodumont.com
+Permalink: :year/:month/:day/:title
+Culture: en-US
+TransformExtensions: [ html, xml ]
+Excludes: ['*.less', '*.bat', '*.exe']

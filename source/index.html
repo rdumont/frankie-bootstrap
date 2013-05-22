@@ -1,0 +1,10 @@
+@template base
+
+<h1>This is my blog</h1>
+
+{% for post in posts -%}
+  <p>
+    <span>{{ post.date | date_net:"dd MMM yyyy" }}</span>
+    <a href="{{post.permalink}}">{{post.title}}</a>
+  </p>
+{% endfor -%}
