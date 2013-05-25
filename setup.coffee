@@ -27,6 +27,6 @@ config = require './frankie.json'
 console.log config
 
 for pkg in config.packages
-	exec "#{nuget} install #{pkg} -o packages -Source http://www.myget.org/F/frankie"
+	exec "#{nuget} install #{pkg} -o packages -Source http://www.myget.org/F/frankie;https://www.nuget.org/api/v2/ -NoCache -PreRelease"
 
 copyAssemblies()
