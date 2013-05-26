@@ -1,4 +1,4 @@
-language: c
+language: node_js
 
 before_install:
   - sudo apt-get install -qq libmono2.0-cil mono-runtime
