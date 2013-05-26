@@ -1,9 +1,9 @@
 language: node_js
 
 before_install:
-  - sudo apt-get install -qq mono-complete
+  - sudo apt-get install -qq libmono2.0-cil mono-runtime
   
 script:
-  - mono ./tools/nuget.exe install Frankie.CommandLine -o packages -Source http://www.myget.org/F/frankie;https://www.nuget.org/api/v2/ -NoCache -PreRelease
+  - mono --runtime=v4.0 ./tools/nuget.exe install Frankie.CommandLine -o packages -Source http://www.myget.org/F/frankie;https://www.nuget.org/api/v2/ -NoCache -PreRelease
   - coffee setup.coffee
   - mono ./app/frankie.exe -s source -o site -v debug --profile
