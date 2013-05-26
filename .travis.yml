@@ -4,6 +4,5 @@ before_install:
   - sudo apt-get install -qq libmono2.0-cil mono-runtime
   
 script:
-  - sudo npm install
   - coffee setup.coffee
   - mono ./app/frankie.exe -s source -o site -v debug --profile
